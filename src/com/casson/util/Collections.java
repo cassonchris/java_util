@@ -111,7 +111,6 @@ public final class Collections {
         if (startList.isEmpty()) {
             // add the sublist that was created to the allSublists collection
             allSublists.add(sublistCopy);
-            return allSublists;
         } else {
             // remove an item from the collection
             Iterator<T> iterator = startList.iterator();
@@ -127,8 +126,7 @@ public final class Collections {
             // "right" branch of recursion tree
             sublistCopy.add(item);
             allSublists.addAll(Collections.getSubCollectionsRecursive(startList, sublistCopy));
-
-            return allSublists;
         }
+        return allSublists;
     }
 }
